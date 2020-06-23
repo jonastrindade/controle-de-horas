@@ -1,0 +1,4 @@
+links
+how to devise: https://guides.railsgirls.com/devise
+link login devise: http://localhost:3000/users/sign_in
+how to bootstrap: https://dev.to/somnathpaul/add-bootstrap-4-to-your-ruby-on-rails-6-application-ole
