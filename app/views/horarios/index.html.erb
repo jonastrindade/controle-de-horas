@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Controle De Horas</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          Chegada
+        </div>
+        <div class="col-sm">
+          Almoço
+        </div>
+        <div class="col-sm">
+          Retorno
+        </div>
+        <div class="col-sm">
+          Saída
+        </div>
+        <div class="col-sm">
+          Data
+        </div>
+      </div>
+      <% @horarios.each do |horario| %>
+        <div class="row">
+          <div class="col-sm">
+            <%= horario&.inicio&.strftime('%H:%M') %>
+          </div>
+          <div class="col-sm">
+            <%= horario&.inicio_almoco&.strftime('%H:%M') %>
+          </div>
+          <div class="col-sm">
+            <%= horario&.fim_almoco&.strftime('%H:%M') %>
+          </div>
+          <div class="col-sm">
+            <%= horario&.fim&.strftime('%H:%M') %>
+          </div>
+          <div class="col-sm">
+            <%= horario&.data&.strftime('%d/%m/%y') %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </body>
+</html>

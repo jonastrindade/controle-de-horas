@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -24,3 +25,7 @@ i5 9 ger 8gb ram
 * ...
 
 
+=======
+# controledehoras
+webapp para controle de horas usando rails
+>>>>>>> 3d2e977a13f556d73f852fb28b6bb8d5e67b988f

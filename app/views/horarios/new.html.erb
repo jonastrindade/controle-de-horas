@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Controle De Horas</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <table>
+      <tr>
+        <tr><td>Chegada</td><td><input class="form-control" type="time" value="13:45:00" id="example-time-input"></td></tr>
+        <tr><td>Almoço</td><td><input class="form-control" type="time" value="13:45:00" id="example-time-input"></td></tr>
+        <tr><td>Retorno</td><td><input class="form-control" type="time" value="13:45:00" id="example-time-input"></td></tr>
+        <tr><td>Saída</td><td><input class="form-control" type="time" value="13:45:00" id="example-time-input"></td></tr>
+        <tr><td>Data</td><td><input class="form-control" type="date" value="2011-08-19" id="example-date-input"></td></tr>
+      </tr>
+    </table>
+    <button type="button" class="btn btn-primary">Enviar</button>
+  </body>
+</html>
