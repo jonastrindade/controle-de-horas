@@ -13,6 +13,9 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">
+          Data
+        </div>
+        <div class="col-sm">
           Chegada
         </div>
         <div class="col-sm">
@@ -24,12 +27,12 @@
         <div class="col-sm">
           Saída
         </div>
-        <div class="col-sm">
-          Data
-        </div>
       </div>
       <% @horarios.each do |horario| %>
         <div class="row">
+          <div class="col-sm">
+            <%= horario&.data&.strftime('%d/%m/%Y') %>
+          </div>
           <div class="col-sm">
             <%= horario&.inicio&.strftime('%H:%M') %>
           </div>
@@ -41,9 +44,6 @@
           </div>
           <div class="col-sm">
             <%= horario&.fim&.strftime('%H:%M') %>
-          </div>
-          <div class="col-sm">
-            <%= horario&.data&.strftime('%d/%m/%y') %>
           </div>
         </div>
       <% end %>

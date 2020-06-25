@@ -1,13 +1,15 @@
 class HorariosController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :set_horarios, only: [:edit, :destroy]
   
   def create
-    byebug
-    @horario = Horario.create! horario_params
+    @horario = Horario.new horario_params
+    @horario.user_id = current_user.id
+    @horario.save!
   end
 
   def index
-    @horarios = User.find(current_user.id).horarios
+    @horarios = User.find(current_user.id).horarios.order :data
   end
 
   def edit
@@ -17,7 +19,7 @@ class HorariosController < ApplicationController
   end
 
   def new
-    @horario
+    @horario = Horario.new
   end
   
   private
@@ -26,6 +28,6 @@ class HorariosController < ApplicationController
     end
 
     def horario_params
-      params.permit([:inicio, :inicio_almoco, :fim_almoco, :fim, :data])
+      params.require(:horario).permit([:inicio, :inicio_almoco, :fim_almoco, :fim, :data])
     end
 end

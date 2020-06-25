@@ -10,15 +10,31 @@
   </head>
 
   <body>
-    <table>
-      <tr>
-        <tr><td>Chegada</td><td><input class="form-control" type="time" value="13:45:00" id="example-time-input"></td></tr>
-        <tr><td>Almoço</td><td><input class="form-control" type="time" value="13:45:00" id="example-time-input"></td></tr>
-        <tr><td>Retorno</td><td><input class="form-control" type="time" value="13:45:00" id="example-time-input"></td></tr>
-        <tr><td>Saída</td><td><input class="form-control" type="time" value="13:45:00" id="example-time-input"></td></tr>
-        <tr><td>Data</td><td><input class="form-control" type="date" value="2011-08-19" id="example-date-input"></td></tr>
-      </tr>
-    </table>
-    <button type="button" class="btn btn-primary">Enviar</button>
+    <div class="container">
+        <%= form_for @horario, url: {action: "create"} do |f| %>
+          <div class="form-group">
+            <label>Data</label>
+            <input class="form-control" <%= f.date_field :data, required: true %>
+          </div>
+          <div class="form-group">
+            <label>Chegada</label>
+            <input class="form-control" <%= f.time_field :inicio, required: true %>
+          </div>
+          <div class="form-group">
+            <label>Almoço</label>
+            <input class="form-control" <%= f.time_field :inicio_almoco, required: true %>
+          </div>
+          <div class="form-group">
+            <label>Retorno</label>
+            <input class="form-control" <%= f.time_field :fim_almoco, required: true %>
+          </div>
+          <div class="form-group">
+            <label>Saída</label>
+            <input class="form-control" <%= f.time_field :fim, required: true %>
+          </div>
+          <%= f.submit "Create", html: {class: "btn btn-primary"} %>
+        <% end %>
+        <%= @horario.errors.full_messages.first if @horario.errors.any? %>
+    </div>
   </body>
 </html>
