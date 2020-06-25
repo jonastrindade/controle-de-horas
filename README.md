@@ -7,22 +7,30 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-linux]
+  ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-linux]
+
 * System dependencies
-ubuntu 19.04
-* Configuration
-i5 9 ger 8gb ram
+  ubuntu 19.04
+
 * Database creation
-22/06/2020
+
+
 * Database initialization
-22/06/2020
+
+
 * How to run the test suite
 
+
 * Services (job queues, cache servers, search engines, etc.)
+  rake db:migrate
+  rails s (to up server)
 
 * Deployment instructions
 
-* ...
+* How to
+  how to install ruby, rails, node, yarn, banco: https://gorails.com/setup/ubuntu/19.04
+  how to devise: https://guides.railsgirls.com/devise
+  how to bootstrap: https://dev.to/somnathpaul/add-bootstrap-4-to-your-ruby-on-rails-6-application-ole
 
 
 =======

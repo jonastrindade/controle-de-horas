@@ -12,14 +12,17 @@ class HorariosController < ApplicationController
     @horarios = User.find(current_user.id).horarios.order :data
   end
 
+  def new
+    @horario = Horario.new
+  end
+
   def edit
   end
 
   def destroy
   end
 
-  def new
-    @horario = Horario.new
+  def update
   end
   
   private

@@ -5,4 +5,9 @@ class Horario < ApplicationRecord
 
   # validates :inicio, presence: { message: "Favor preencher horário de início" }
 
+  def validar_horarios
+  end
+
+  def horas_trabalhadas_mes
+  end
 end
