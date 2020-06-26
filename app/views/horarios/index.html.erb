@@ -19,6 +19,7 @@
             <th scope="col">Almoço</th>
             <th scope="col">Retorno</th>
             <th scope="col">Saída</th>
+            <th scope="col">Soma</th>
           </tr>
         </thead>
         
@@ -30,6 +31,7 @@
               <td><%= horario&.inicio_almoco&.strftime('%H:%M') %></td>
               <td><%= horario&.fim_almoco&.strftime('%H:%M') %></td>
               <td><%= horario&.fim&.strftime('%H:%M') %></td>
+              <td><%= horario.horas_trabalhadas_dia&.strftime('%H:%M') %></td>
             </tr>
           <% end %>
         </tbody>

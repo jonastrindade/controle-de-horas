@@ -1,14 +1,14 @@
 # README
-* Ruby version
+  Ruby version
   Ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-linux]
 
-* Rails version
+  Rails version
   Rails 6.0.3.2
 
-* Services (job queues, cache servers, search engines, etc.)
+  Services (job queues, cache servers, search engines, etc.)
   Rails s 
 
-* How to
+  How to
   how to install ruby, rails, node, yarn, banco: https://gorails.com/setup/ubuntu/19.04
   how to devise: https://guides.railsgirls.com/devise
   how to bootstrap: https://dev.to/somnathpaul/add-bootstrap-4-to-your-ruby-on-rails-6-application-ole
@@ -16,11 +16,12 @@
 
 # CONTROLE DE HORAS
 
-  Um sistema simples para controlar horários de estagiarios com cadasatro e login. Duas telas, uma para lançar horas trabalhadas e outra visualizar.
+  Um sistema para controlar horários dos estagiários. Entre no link localhost:3000 faça seu cadastro ou login. São duas telas, 'Lançar horas' e 'Histórico de horários', na primeira você lança os horários dos dias trabalhados e na segunda são exibidos os horários já lançados.
 
-# HOW TO(testes feitos em ubuntu 19 e 20)
 
-  git clone https://github.com/jonastrindade/controle-de-horas.git
+# HOW TO
+
+  Depois que clonar esse repositório, entre na pasta e realize a instalação seguindo os proximos passos, recomendo usar uma maquina virtual com Ubuntu 19 ou 20.
 
   cd controle-de-horas
 
@@ -79,5 +80,5 @@
   GRANT ALL PRIVILEGES ON *.* TO 'bduser'@'localhost';
 
   yarn add bootstrap@4.3.1 jquery popper.js
-  
+
   bundle install

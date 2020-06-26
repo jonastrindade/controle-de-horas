@@ -9,7 +9,7 @@ class HorariosController < ApplicationController
   end
 
   def index
-    @horarios = User.find(current_user.id).horarios.order :data
+    @horarios = User.find(current_user.id).horarios.order data: :desc
   end
 
   def new
