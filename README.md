@@ -33,6 +33,9 @@ Things you may want to cover:
   how to bootstrap: https://dev.to/somnathpaul/add-bootstrap-4-to-your-ruby-on-rails-6-application-ole
 
 
+sudo mysql --execute="CREATE DATABASE newDB"
+sudo mysql newDB < dump.sql
+
 =======
 # controledehoras
 webapp para controle de horas usando rails

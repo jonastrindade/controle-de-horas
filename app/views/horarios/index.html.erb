@@ -11,42 +11,28 @@
 
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-sm">
-          Data
-        </div>
-        <div class="col-sm">
-          Chegada
-        </div>
-        <div class="col-sm">
-          Almoço
-        </div>
-        <div class="col-sm">
-          Retorno
-        </div>
-        <div class="col-sm">
-          Saída
-        </div>
-      </div>
-      <% @horarios.each do |horario| %>
-        <div class="row">
-          <div class="col-sm">
-            <%= horario&.data&.strftime('%d/%m/%Y') %>
-          </div>
-          <div class="col-sm">
-            <%= horario&.inicio&.strftime('%H:%M') %>
-          </div>
-          <div class="col-sm">
-            <%= horario&.inicio_almoco&.strftime('%H:%M') %>
-          </div>
-          <div class="col-sm">
-            <%= horario&.fim_almoco&.strftime('%H:%M') %>
-          </div>
-          <div class="col-sm">
-            <%= horario&.fim&.strftime('%H:%M') %>
-          </div>
-        </div>
-      <% end %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Data</th>
+            <th scope="col">Chegada</th>
+            <th scope="col">Almoço</th>
+            <th scope="col">Retorno</th>
+            <th scope="col">Saída</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <% @horarios.each do |horario| %>
+            <tr>
+              <td><%= horario&.data&.strftime('%d/%m/%Y') %></td>
+              <td><%= horario&.inicio&.strftime('%H:%M') %></td>
+              <td><%= horario&.inicio_almoco&.strftime('%H:%M') %></td>
+              <td><%= horario&.fim_almoco&.strftime('%H:%M') %></td>
+              <td><%= horario&.fim&.strftime('%H:%M') %></td>
+            </tr>
+          <% end %>
+        </tbody>
     </div>
   </body>
 </html>
