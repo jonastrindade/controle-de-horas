@@ -20,9 +20,14 @@ class HorariosController < ApplicationController
   end
 
   def destroy
+    @horario.destroy
+    redirect_to action: :index
   end
 
   def update
+  end
+
+  def show
   end
   
   private

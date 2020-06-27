@@ -31,7 +31,8 @@
               <td><%= horario&.inicio_almoco&.strftime('%H:%M') %></td>
               <td><%= horario&.fim_almoco&.strftime('%H:%M') %></td>
               <td><%= horario&.fim&.strftime('%H:%M') %></td>
-              <td><%= horario.horas_trabalhadas_dia&.strftime('%H:%M') %></td>
+              <td><%= horario&.horas_trabalhadas_dia&.strftime('%H:%M') %></td>
+              <td><%= link_to "Remover", horario, method: :delete, data: { confirm: "Tem certeza que deseja remover esse lançamento?" } %></td>
             </tr>
           <% end %>
         </tbody>
